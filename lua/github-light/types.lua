@@ -1,0 +1,115 @@
+--- @class theme.Config
+--- @field transparent? boolean
+--- @field terminal_colors? boolean
+--- @field styles? theme.Styles
+--- @field overrides? fun(colors: theme.Colors): theme.Highlights
+--- @field on_highlights? fun(highlights: theme.Highlights, colors: theme.Colors)
+
+--- @class theme.TerminalPalette
+--- @field red string
+--- @field bright_red string
+--- @field green string
+--- @field bright_green string
+--- @field yellow string
+--- @field bright_yellow string
+--- @field blue string
+--- @field bright_blue string
+--- @field magenta string
+--- @field bright_magenta string
+--- @field cyan string
+--- @field bright_cyan string
+
+--- @class theme.TerminalColors: theme.TerminalPalette
+--- @field black string
+--- @field bright_black string
+--- @field white string
+--- @field bright_white string
+
+--- @class github_light.ChangeColors
+--- @field fg string Sign and marker foreground
+--- @field line_bg string Full-line background
+--- @field text_bg string Inline text background
+
+--- @class github_light.Changes
+--- @field add github_light.ChangeColors
+--- @field change github_light.ChangeColors
+--- @field conflict github_light.ChangeColors
+--- @field delete github_light.ChangeColors
+
+--- @class theme.Colors
+--- @field bg string Editor background
+--- @field bg_gutter string Gutter and inactive surface background
+--- @field bg_surface string Statusline and surface background
+--- @field bg_highlight string Emphasized surface background
+--- @field fg string Default text
+--- @field fg_muted string Secondary text
+--- @field fg_dim string Dim text
+--- @field fg_bright string Emphasized text
+--- @field fg_inlay string Inlay hint text
+--- @field border string
+--- @field cursor string
+--- @field cursorline string
+--- @field quickfixline string
+--- @field visual string
+--- @field line_number string
+--- @field line_number_current string
+--- @field whitespace string
+--- @field color_column string
+--- @field fold_bg string Folded text background
+--- @field fold_fg string Folded text foreground
+--- @field ghost_text string
+--- @field directory string
+--- @field markup_code_bg string
+--- @field markup_code string
+--- @field markup_heading string
+--- @field markup_list string
+--- @field markup_quote string
+--- @field keyword string
+--- @field string string
+--- @field number string
+--- @field func string
+--- @field func_builtin string
+--- @field func_call string
+--- @field variable string
+--- @field variable_builtin string
+--- @field parameter string
+--- @field property string
+--- @field type string
+--- @field type_builtin string
+--- @field type_definition string
+--- @field constant string
+--- @field constant_builtin string
+--- @field comment string
+--- @field comment_doc string
+--- @field comment_tag string
+--- @field operator string
+--- @field delimiter string
+--- @field tag string
+--- @field attribute string
+--- @field special_tag string
+--- @field label string
+--- @field metadata string
+--- @field special string
+--- @field special_char string
+--- @field escape string
+--- @field regex string
+--- @field include string
+--- @field error string
+--- @field warning string
+--- @field info string
+--- @field hint string
+--- @field ok string
+--- @field lsp_reference string
+--- @field search string
+--- @field search_match string
+--- @field search_current string
+--- @field match string
+--- @field changes github_light.Changes Shared Git and diff colors
+--- @field todo string
+--- @field link string
+--- @field none string Transparency sentinel
+--- @field terminal theme.TerminalColors
+
+--- @alias theme.Highlights table<string, vim.api.keyset.highlight>
+--- @alias theme.StyleType "comments" | "keywords" | "functions" | "variables"
+--- @alias theme.Styles table<theme.StyleType, vim.api.keyset.highlight>
